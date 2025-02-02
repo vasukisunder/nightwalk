@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "EB Garamond", serif;
+    color: #B4BCD0;  
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 33.33%;
+    padding: 80px;
+    background-color: #0E1725;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    width: 66.67%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+}
+
+.grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+/* More saturated blue gradient */
+.grid-item:nth-child(1) { background-color: #0F1827; }
+.grid-item:nth-child(2) { background-color: #111A29; }
+.grid-item:nth-child(3) { background-color: #131C2B; }
+.grid-item:nth-child(4) { background-color: #151E2D; }
+.grid-item:nth-child(5) { background-color: #17202F; }
+.grid-item:nth-child(6) { background-color: #111A29; }
+.grid-item:nth-child(7) { background-color: #131C2B; }
+.grid-item:nth-child(8) { background-color: #151E2D; }
+.grid-item:nth-child(9) { background-color: #17202F; }
+.grid-item:nth-child(10) { background-color: #192231; }
+.grid-item:nth-child(11) { background-color: #131C2B; }
+.grid-item:nth-child(12) { background-color: #151E2D; }
+.grid-item:nth-child(13) { background-color: #17202F; }
+.grid-item:nth-child(14) { background-color: #192231; }
+.grid-item:nth-child(15) { background-color: #1B2433; }
+.grid-item:nth-child(16) { background-color: #151E2D; }
+.grid-item:nth-child(17) { background-color: #17202F; }
+.grid-item:nth-child(18) { background-color: #192231; }
+.grid-item:nth-child(19) { background-color: #1B2433; }
+.grid-item:nth-child(20) { background-color: #1D2635; }
+.grid-item:nth-child(21) { background-color: #17202F; }
+.grid-item:nth-child(22) { background-color: #192231; }
+.grid-item:nth-child(23) { background-color: #1B2433; }
+.grid-item:nth-child(24) { background-color: #1D2635; }
+.grid-item:nth-child(25) { background-color: #1F2837; }
+
+/* Remove hover effect from label items */
+.grid-item.label {
+    background-color: #0F1827 !important; /* Override the nth-child background */
+    pointer-events: none; /* Prevents any hover/click interactions */
+}
+
+/* Update hover selector to only target grid items with links */
+.grid-item:has(a):hover {
+    font-weight: bold;
+    background-color: #0C1522;
+}
+
+.grid-item a {
+    text-decoration: none;
+    color: #B4BCD0;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-item:hover {
+    font-weight: bold;
+    background-color: #0C1522;
+}
+
+.label {
+    font-weight: bold;
+}
+
+
+
