@@ -6,15 +6,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Night Walk - 2</title>
+    <title>Night Walk - 5</title>
     <style>
-        /* ... keeping all the same styles as page1 ... */
         body {
             background-color: #0A1526;
-            color: white;
+            color: #cfcfcf;
             font-family: "Louize", serif;
             margin: 0;
             height: 100vh;
@@ -23,7 +22,6 @@
             overflow: hidden;
         }
 
-        
         .main-content {
             width: 66.67%;
             padding: 40px;
@@ -32,10 +30,10 @@
         }
 
         .poem-container {
-            max-width: 600px;
+            max-width: 900px;
             margin: auto;
-            line-height: 1.3;
-            font-size: 2vh;
+            line-height: 1;
+            font-size: 1.8vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -44,23 +42,63 @@
             box-sizing: border-box;
         }
 
-        /* New styles for hover effect */
         .line {
-            opacity: 0.1;
-            transition: opacity 30s ease;
-            margin: 0.5vh 0;
+            position: relative;
+            margin: 1vh 0;
+            color: white;
+            transform-origin: center;
         }
 
-        .line:hover {
-            opacity: 1;
-            transition: opacity 0.5s ease;
+        /* Extreme warps + indentation */
+        .line:nth-child(2n) {
+            transform: perspective(500px) rotateX(12deg) skewX(15deg) rotate(3deg);
+            text-indent: 2em;
+        }
+        .line:nth-child(3n) {
+            transform: perspective(500px) rotateX(-10deg) skewX(-18deg) rotate(-4deg);
+            text-indent: -1em;
+        }
+        .line:nth-child(5n) {
+            transform: perspective(500px) rotateX(15deg) skewX(-12deg) rotate(-2deg);
+            text-indent: 3em;
+        }
+        .line:nth-child(7n) {
+            transform: perspective(500px) rotateX(-14deg) skewX(16deg) rotate(5deg);
+            text-indent: -2em;
         }
 
-        .line:hover,
-        .line:focus {
-            opacity: 1;
-            transition: opacity 0.5s ease;
+        /* More extreme skews + rotation + indentation */
+        .line:nth-child(4n) {
+            transform: skewX(20deg) rotate(-3deg);
+            text-indent: 4em;
         }
+        .line:nth-child(6n) {
+            transform: skewX(-22deg) rotate(4deg);
+            text-indent: -3em;
+        }
+
+        /* Additional random-looking variations */
+        .line:nth-child(8n) {
+            transform: perspective(500px) rotateX(8deg) skewX(-25deg) rotate(6deg);
+            text-indent: 1em;
+        }
+        .line:nth-child(9n) {
+            transform: perspective(500px) rotateX(-12deg) skewX(22deg) rotate(-5deg);
+            text-indent: -4em;
+        }
+
+        /* Glitch effect for individual characters */
+        .glitch-char {
+            position: relative;
+            display: inline-block;
+        }
+
+        .glitch-char:nth-child(3n) { top: 2px; }
+        .glitch-char:nth-child(3n+1) { top: -2px; }
+        .glitch-char:nth-child(5n) { top: 1px; }
+        .glitch-char:nth-child(7n) { top: -1px; }
+        .glitch-char:nth-child(11n) { top: 3px; }
+        .glitch-char:nth-child(13n) { top: -3px; }
     </style>
 </head>
 <body>
@@ -69,11 +107,11 @@
             <a href="index.html">← home</a>
         </div>
         <div>
-            opacity<br>
-            2/4
+            perspective<br>
+            1/4
             <div class="nav-links">
-                <a href="1.html">← previous</a>
-                <a href="3.html">next →</a>
+                <a href="4.html">← previous</a>
+                <a href="6.html">next →</a>
             </div>
         </div>
     </div>
@@ -107,4 +145,4 @@
         </div>
     </div>
 </body>
-</html> 
+</html>

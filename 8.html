@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://db.onlinewebfonts.com/c/df180f85d58e18017bf4cfa28468be6b?family=Louize" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Night Walk - 8</title>
+    <style>
+        body {
+            background-color: #0A1526;
+            color: #cecece;
+            font-family: "Louize", serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .main-content {
+            width: 66.67%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .poem-text {
+            font-size: 2vh;
+            line-height: 2;
+            position: relative;
+            padding: 2em;
+            transform: rotate(15deg);
+        }
+
+        .line {
+            position: relative;
+            display: block;
+            margin: 0.2em 0;
+            padding: 0.5em;
+        }
+
+        /* Vertical faces (lighter) */
+        .line:nth-child(odd) {
+            transform: skew(50deg, -20deg) scaleY(0.75);
+            background-color: rgba(255, 255, 255, 0.08);
+        }
+
+        /* Horizontal faces (darker) */
+        .line:nth-child(even) {
+            transform: skew(-5deg, -20deg);
+            background-color: rgba(255, 255, 255, 0.02);
+        }
+
+        .line:nth-child(1) { margin-left: 0; }
+        .line:nth-child(2) { margin-left: 1em; }
+        .line:nth-child(3) { margin-left: 2em; }
+        .line:nth-child(4) { margin-left: 3em; }
+        .line:nth-child(5) { margin-left: 4em; }
+        .line:nth-child(6) { margin-left: 5em; }
+        .line:nth-child(7) { margin-left: 6em; }
+        .line:nth-child(8) { margin-left: 7em; }
+        .line:nth-child(9) { margin-left: 8em; }
+        .line:nth-child(10) { margin-left: 9em; }
+        .line:nth-child(11) { margin-left: 10em; }
+        .line:nth-child(12) { margin-left: 11em; }
+        .line:nth-child(13) { margin-left: 12em; }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="nav-links">
+            <a href="index.html">← home</a>
+        </div>
+        <div>
+            perspective<br>
+            4/4
+            <div class="nav-links">
+                <a href="7.html">← previous</a>
+                <a href="index.html">next →</a>
+            </div>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="poem-container">
+            <div class="poem-text">
+                <div class="line">The all-night convenience store's empty and no one is behind the counter.</div>
+                <div class="line">You open and shut the glass door a few times causing a bell to go off,</div>
+                <div class="line">but no one appears. You only came to buy a pack of cigarettes, maybe a copy of</div>
+                <div class="line">yesterday's newspaper—finally you take one and leave thirty-five cents in its place.</div>
+                <div class="line">It is freezing, but it is a good thing to step outside again: you can feel less alone in the night,</div>
+                <div class="line">with lights on here and there between the dark buildings and trees.</div>
+                <div class="line">Your own among them, somewhere.</div>
+                <div class="line">There must be thousands of people in this city who are dying to welcome you</div>
+                <div class="line">into their small bolted rooms, to sit you down and tell you what has happened to their lives.</div>
+                <div class="line">And the night smells like snow.</div>
+                <div class="line">Walking home for a moment you almost believe you could start again.</div>
+                <div class="line">And an intense love rushes to your heart,</div>
+                <div class="line">and hope. It's unendurable, unendurable.</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
