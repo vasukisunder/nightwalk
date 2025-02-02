@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://db.onlinewebfonts.com/c/df180f85d58e18017bf4cfa28468be6b?family=Louize" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Night Walk - 1</title>
+    <style>
+        body {
+            background-color: #0A1526;
+            color: white;
+            font-family: "Louize", serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+
+        .main-content {
+            width: 66.67%;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .poem-container {
+            max-width: 600px;
+            margin: auto;
+            line-height: 1.3;
+            font-size: 2vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 100%;
+            padding: 15vh 0;
+            box-sizing: border-box;
+        }
+
+        .line {
+            opacity: 0;
+            animation: fadeIn 3s forwards;
+            animation-delay: calc(var(--delay) * 0.8s);
+            margin: 0.5vh 0;
+        }
+
+        /* Lines mentioning light or brightness */
+        .light {
+            opacity: 0.9;
+        }
+
+        /* Lines about darkness or night */
+        .dark {
+            opacity: 0.4;
+        }
+
+        /* Lines about transition or movement */
+        .transition {
+            opacity: 0.6;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: var(--final-opacity, 1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="nav-links">
+            <a href="index.html">← home</a>
+        </div>
+        <div>
+            fade and opacity<br>
+            1/4
+            <div class="nav-links">
+                <a href="20.html">← previous</a>
+                <a href="2.html">next →</a>
+            </div>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="poem-container">
+            <div class="line" style="--delay: 1; --final-opacity: 0.2">The all-night convenience store's empty</div>
+            <div class="line" style="--delay: 2; --final-opacity: 0.2">and no one is behind the counter.</div>
+            <div class="line" style="--delay: 3; --final-opacity: 0.6">You open and shut the glass door a few times</div>
+            <div class="line" style="--delay: 4; --final-opacity: 0.6">causing a bell to go off,</div>
+            <div class="line" style="--delay: 5; --final-opacity: 0.3">but no one appears. You only came</div>
+            <div class="line" style="--delay: 6; --final-opacity: 0.4">to buy a pack of cigarettes, maybe</div>
+            <div class="line" style="--delay: 7; --final-opacity: 0.3">a copy of yesterday's newspaper—</div>
+            <div class="line" style="--delay: 8; --final-opacity: 0.6">finally you take one and leave</div>
+            <div class="line" style="--delay: 9; --final-opacity: 0.4">thirty-five cents in its place.</div>
+            <div class="line" style="--delay: 10; --final-opacity: 0.6">It is freezing, but it is a good thing</div>
+            <div class="line" style="--delay: 11; --final-opacity: 0.7">to step outside again:</div>
+            <div class="line" style="--delay: 12; --final-opacity: 0.2">you can feel less alone in the night,</div>
+            <div class="line" style="--delay: 13; --final-opacity: 1">with lights on here and there</div>
+            <div class="line" style="--delay: 14; --final-opacity: 0.2">between the dark buildings and trees.</div>
+            <div class="line" style="--delay: 15; --final-opacity: 1">Your own among them, somewhere.</div>
+            <div class="line" style="--delay: 16; --final-opacity: 0.5">There must be thousands of people</div>
+            <div class="line" style="--delay: 17; --final-opacity: 0.4">in this city who are dying</div>
+            <div class="line" style="--delay: 18; --final-opacity: 0.6">to welcome you into their small bolted rooms,</div>
+            <div class="line" style="--delay: 19; --final-opacity: 0.7">to sit you down and tell you</div>
+            <div class="line" style="--delay: 20; --final-opacity: 0.6">what has happened to their lives.</div>
+            <div class="line" style="--delay: 21; --final-opacity: 0.3">And the night smells like snow.</div>
+            <div class="line" style="--delay: 22; --final-opacity: 0.8">Walking home for a moment</div>
+            <div class="line" style="--delay: 23; --final-opacity: 1">you almost believe you could start again.</div>
+            <div class="line" style="--delay: 24; --final-opacity: 1">And an intense love rushes to your heart,</div>
+            <div class="line" style="--delay: 25; --final-opacity: 1">and hope. It's unendurable, unendurable.</div>
+        </div>
+    </div>
+</body>
+</html> 

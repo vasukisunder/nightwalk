@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://db.onlinewebfonts.com/c/df180f85d58e18017bf4cfa28468be6b?family=Louize" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Night Walk - 4</title>
+    <style>
+        body {
+            background-color: #0A1526;
+            color: #cfcfcf;
+            font-family: "Louize", serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .main-content {
+            width: 66.67%;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .poem-container {
+            max-width: 500px;
+            margin: auto;
+            line-height: 1.3;
+            font-size: 2.5vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 100%;
+            padding: 15vh 0;
+            box-sizing: border-box;
+        }
+
+        .line {
+            position: relative;
+            margin: 1vh 0;
+            z-index: 1;
+        }
+
+        /* Base text opacity */
+        .base-text {
+            opacity: 0.01;
+        }
+
+        /* Real text is fully opaque */
+        .real {
+            position: absolute !important;
+            opacity: 1 !important;
+            z-index: 2 !important;
+            left: 0;
+            top: 0;
+            color: #cfcfcf;
+            display: block;
+            width: 100%;
+        }
+
+        /* Ghost effects */
+        .line::before,
+        .line::after {
+            content: attr(data-text);
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: white;
+            opacity: 0.12;
+            z-index: 1;
+        }
+
+        .line::before {
+            text-shadow: 
+                2em 0.5em rgba(255, 255, 255, 0.20),
+                4em 1.5em rgba(255, 255, 255, 0.10),
+                6em 2.5em rgba(255, 255, 255, 0.10),
+                -2em -0.5em rgba(255, 255, 255, 0.20),
+                -4em -1.5em rgba(255, 255, 255, 0.30),
+                -6em -2.5em rgba(255, 255, 255, 0.20);
+        }
+
+        .line::after {
+            text-shadow: 
+                1em 2em rgba(255, 255, 255, 0.12),
+                3em 3em rgba(255, 255, 255, 0.32),
+                5em 4em rgba(255, 255, 255, 0.32),
+                -1em -2em rgba(255, 255, 255, 0.32),
+                -3em -3em rgba(255, 255, 255, 0.22),
+                -5em -4em rgba(255, 255, 255, 0.12);
+        }
+
+        /* Simple position modifiers */
+        .shift-left { left: -3em; }
+        .shift-right { left: 4em; }
+        .shift-up { top: -1.8em; }
+        .shift-down { top: 1.8em; }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="nav-links">
+            <a href="index.html">← home</a>
+        </div>
+        <div>
+            fade and opacity<br>
+            4/4
+            <div class="nav-links">
+                <a href="3.html">← previous</a>
+                <a href="5.html">next →</a>
+            </div>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="poem-container">
+            <div class="line" data-text="The all-night convenience store's empty and no one is behind the counter.">
+                <span class="base-text">The all-night convenience store's empty and no one is behind the counter.</span>
+                <span class="real shift-left">The all-night convenience store's empty and no one is behind the counter.</span>
+            </div>
+            
+            <div class="line" data-text="You open and shut the glass door a few times causing a bell to go off, but no one appears.">
+                <span class="base-text">You open and shut the glass door a few times causing a bell to go off, but no one appears.</span>
+                <span class="real shift-right">You open and shut the glass door a few times causing a bell to go off, but no one appears.</span>
+            </div>
+            
+            <div class="line" data-text="You only came to buy a pack of cigarettes, maybe a copy of yesterday's newspaper—finally you take one and leave thirty-five cents in its place.">
+                <span class="base-text">You only came to buy a pack of cigarettes, maybe a copy of yesterday's newspaper—finally you take one and leave thirty-five cents in its place.</span>
+                <span class="real">You only came to buy a pack of cigarettes, maybe a copy of yesterday's newspaper—finally you take one and leave thirty-five cents in its place.</span>
+            </div>
+            
+            <div class="line" data-text="It is freezing, but it is a good thing to step outside again: you can feel less alone in the night, with lights on here and there between the dark buildings and trees.">
+                <span class="base-text">It is freezing, but it is a good thing to step outside again: you can feel less alone in the night, with lights on here and there between the dark buildings and trees.</span>
+                <span class="real shift-left">It is freezing, but it is a good thing to step outside again: you can feel less alone in the night, with lights on here and there between the dark buildings and trees.</span>
+            </div>
+            
+            <div class="line" data-text="Your own among them, somewhere.">
+                <span class="base-text">Your own among them, somewhere.</span>
+                <span class="real shift-right">Your own among them, somewhere.</span>
+            </div>
+            
+            <div class="line" data-text="There must be thousands of people in this city who are dying to welcome you into their small bolted rooms, to sit you down and tell you what has happened to their lives.">
+                <span class="base-text">There must be thousands of people in this city who are dying to welcome you into their small bolted rooms, to sit you down and tell you what has happened to their lives.</span>
+                <span class="real shift-slight-down">There must be thousands of people in this city who are dying to welcome you into their small bolted rooms, to sit you down and tell you what has happened to their lives.</span>
+            </div>
+            
+            <div class="line" data-text="And the night smells like snow.">
+                <span class="base-text">And the night smells like snow.</span>
+                <span class="real shift-right">And the night smells like snow.</span>
+            </div>
+            
+            <div class="line" data-text="Walking home for a moment you almost believe you could start again.">
+                <span class="base-text">Walking home for a moment you almost believe you could start again.</span>
+                <span class="real">Walking home for a moment you almost believe you could start again.</span>
+            </div>
+            
+            <div class="line" data-text="And an intense love rushes to your heart, and hope.">
+                <span class="base-text">And an intense love rushes to your heart, and hope.</span>
+                <span class="real shift-down">And an intense love rushes to your heart, and hope.</span>
+            </div>
+            
+            <div class="line" data-text="It's unendurable, unendurable.">
+                <span class="base-text">It's unendurable, unendurable.</span>
+                <span class="real shift-down">It's unendurable, unendurable.</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
