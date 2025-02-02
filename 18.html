@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://db.onlinewebfonts.com/c/df180f85d58e18017bf4cfa28468be6b?family=Louize" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Night Walk - 18</title>
+    <style>
+        body {
+            background-color: #0A1526;
+            color: white;
+            font-family: "Louize", serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .main-content {
+            width: 66.67%;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .poem-container {
+            max-width: 600px;
+            margin: auto;
+            line-height: 1.3;
+            font-size: 2vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 100%;
+            padding: 15vh 0;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .line {
+            margin: 0.5vh 0;
+            animation: heartbeat var(--duration) infinite;
+            animation-delay: calc(var(--line-number) * 0.2s);
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); opacity: 0.8; }
+            15% { transform: scale(calc(1 + (var(--intensity) * 0.03))); opacity: 1; }
+            30% { transform: scale(1); opacity: 0.85; }
+            45% { transform: scale(calc(1 + (var(--intensity) * 0.015))); opacity: 1; }
+            60% { transform: scale(1); opacity: 0.9; }
+            80% { transform: scale(1); opacity: 0.8; }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="nav-links">
+            <a href="index.html">← home</a>
+        </div>
+        <div>
+            motion<br>
+            2/4
+            <div class="nav-links">
+                <a href="17.html">← previous</a>
+                <a href="19.html">next →</a>
+            </div>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="poem-container">
+            <div class="line" style="--intensity: 1; --duration: 5s; --line-number: 1">The all-night convenience store's empty</div>
+            <div class="line" style="--intensity: 1; --duration: 5s; --line-number: 2">and no one is behind the counter.</div>
+            <div class="line" style="--intensity: 1; --duration: 5s; --line-number: 3">You open and shut the glass door a few times</div>
+            <div class="line" style="--intensity: 1; --duration: 5s; --line-number: 4">causing a bell to go off,</div>
+            <div class="line" style="--intensity: 2; --duration: 5s; --line-number: 5">but no one appears. You only came</div>
+            <div class="line" style="--intensity: 2; --duration: 5s; --line-number: 6">to buy a pack of cigarettes, maybe</div>
+            <div class="line" style="--intensity: 2; --duration: 5s; --line-number: 7">a copy of yesterday's newspaper—</div>
+            <div class="line" style="--intensity: 3; --duration: 5s; --line-number: 8">finally you take one and leave</div>
+            <div class="line" style="--intensity: 3; --duration: 5s; --line-number: 9">thirty-five cents in its place.</div>
+            <div class="line" style="--intensity: 4; --duration: 5s; --line-number: 10">It is freezing, but it is a good thing</div>
+            <div class="line" style="--intensity: 4; --duration: 5s; --line-number: 11">to step outside again:</div>
+            <div class="line" style="--intensity: 5; --duration: 5s; --line-number: 12">you can feel less alone in the night,</div>
+            <div class="line" style="--intensity: 5; --duration: 5s; --line-number: 13">with lights on here and there</div>
+            <div class="line" style="--intensity: 6; --duration: 5s; --line-number: 14">between the dark buildings and trees.</div>
+            <div class="line" style="--intensity: 6; --duration: 5s; --line-number: 15">Your own among them, somewhere.</div>
+            <div class="line" style="--intensity: 7; --duration: 5s; --line-number: 16">There must be thousands of people</div>
+            <div class="line" style="--intensity: 7; --duration: 5s; --line-number: 17">in this city who are dying</div>
+            <div class="line" style="--intensity: 8; --duration: 5s; --line-number: 18">to welcome you into their small bolted rooms,</div>
+            <div class="line" style="--intensity: 8; --duration: 5s; --line-number: 19">to sit you down and tell you</div>
+            <div class="line" style="--intensity: 9; --duration: 5s; --line-number: 20">what has happened to their lives.</div>
+            <div class="line" style="--intensity: 9; --duration: 5s; --line-number: 21">And the night smells like snow.</div>
+            <div class="line" style="--intensity: 10; --duration: 5s; --line-number: 22">Walking home for a moment</div>
+            <div class="line" style="--intensity: 10; --duration: 5s; --line-number: 23">you almost believe you could start again.</div>
+            <div class="line" style="--intensity: 12; --duration: 5s; --line-number: 24">And an intense love rushes to your heart,</div>
+            <div class="line" style="--intensity: 15; --duration: 5s; --line-number: 25">and hope. It's unendurable, unendurable.</div>
+        </div>
+    </div>
+</body>
+</html> 
