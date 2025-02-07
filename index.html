@@ -12,8 +12,23 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Mobile header with controls -->
+    <div class="mobile-header">
+        <strong>Night Walk</strong>
+    </div>
+
+    <!-- Separate menu icon from header -->
+    <button class="menu-icon" onclick="toggleMenu()">☰</button>
+
     <div class="container">
         <div class="sidebar sidebar-home">
+            <div class="about-text">
+                <p class="popup-title">About This Project</p>
+                   <p> This project investigates the interplay between text and form, using Franz Kafka's <span class="italic">Night Walk</span> as a canvas for typographic experimentation. Through 20 distinct compositions, the poem shifts in structure, rhythm, and atmosphere—sometimes illuminated, sometimes obscured. Light, opacity,  motion, and spatial arrangement shape new ways of experiencing the text.<br><br> 
+
+                   created by <a class="popup-link" href="https://vasuki.studio/" target="_blank">vasuki sunder</a></p>
+            </div>
+            
             <div class="sidebar-header">
                 <span class="info-trigger" onclick="togglePopup()">?</span>
             </div>
@@ -87,18 +102,29 @@
     </div>
 
     <script>
-        function togglePopup() {
-            const popup = document.getElementById('info-popup');
-            if (popup.style.display === 'block') {
-                popup.style.display = 'none';
+        function toggleMenu() {
+            const sidebar = document.querySelector('.sidebar');
+            const menuIcon = document.querySelector('.menu-icon');
+            
+            sidebar.classList.toggle('active');
+            menuIcon.classList.toggle('active');  // Add active class to menu icon
+            
+            // Update icon text
+            if (sidebar.classList.contains('active')) {
+                menuIcon.textContent = '×';
             } else {
-                popup.style.display = 'block';
+                menuIcon.textContent = '☰';
             }
         }
 
-        // Add click event listener to the popup background
+        // Keep popup functionality for desktop
+        function togglePopup() {
+            const popup = document.getElementById('info-popup');
+            popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
+        }
+
+        // Close popup when clicking background
         document.getElementById('info-popup').addEventListener('click', function(e) {
-            // Close only if clicking the background (not the content)
             if (e.target === this) {
                 this.style.display = 'none';
             }
