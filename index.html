@@ -8,14 +8,25 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>Night Walk</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <div class="sidebar sidebar-home">
-            <p><strong>Night Walk</strong> <br>
-                by Franz Wright<br><br>
+            <div class="sidebar-header">
+                <span class="info-trigger" onclick="togglePopup()">?</span>
+            </div>
+            <div id="info-popup" class="popup">
+                <div class="popup-content">
+                    <span class="close-btn" onclick="togglePopup()">&times;</span>
+                    <p class="popup-title">About This Project</p>
+                   <p> This project investigates the interplay between text and form, using Franz Kafka's <span class="italic">Night Walk</span> as a canvas for typographic experimentation. Through 20 distinct compositions, the poem shifts in structure, rhythm, and atmosphere—sometimes illuminated, sometimes obscured. Light, opacity,  motion, and spatial arrangement shape new ways of experiencing the text.<br><br> 
+
+                   created by <a class="popup-link" href="https://vasuki.studio/" target="_blank">vasuki sunder</a></p>
+                </p>              </div>
+            </div>
+            <p>Night Walk<br>by Franz Wright<br><br>
                 The all-night convenience store's empty<br>
                 and no one is behind the counter.<br>
                 You open and shut the glass door a few times<br>
@@ -43,35 +54,30 @@
                 and hope. It's unendurable, unendurable.</p>
         </div>
         <div class="grid">
-            <!-- Row 1 -->
+           
             <div class="grid-item label">1. opacity</div>
             <div class="grid-item"><a href="1.html"><span class="number">1.1</span> emerge</a></div>
             <div class="grid-item"><a href="2.html"><span class="number">1.2</span> linger</a></div>
             <div class="grid-item"><a href="3.html"><span class="number">1.3</span> breathe</a></div>
             <div class="grid-item"><a href="4.html"><span class="number">1.4</span> echo</a></div>
 
-            <!-- Row 2 -->
             <div class="grid-item label">2. perspective</div>
             <div class="grid-item"><a href="5.html"><span class="number">2.1</span> tilt</a></div>
             <div class="grid-item"><a href="6.html"><span class="number">2.2</span> depth</a></div>
             <div class="grid-item"><a href="7.html"><span class="number">2.3</span> tunnel</a></div>
             <div class="grid-item"><a href="8.html"><span class="number">2.4</span> ascend</a></div>
 
-            <!-- Row 3 -->
             <div class="grid-item label">3. light</div>
             <div class="grid-item"><a href="9.html"><span class="number">3.1</span> glimmer</a></div>
             <div class="grid-item"><a href="10.html"><span class="number">3.2</span> lamp</a></div>
             <div class="grid-item"><a href="11.html"><span class="number">3.3</span> strobe</a></div>
             <div class="grid-item"><a href="12.html"><span class="number">3.4</span> flicker</a></div>
 
-            <!-- Row 4 -->
             <div class="grid-item label">4. fragmentation</div>
             <div class="grid-item"><a href="13.html"><span class="number">4.1</span> meander</a></div>
             <div class="grid-item"><a href="14.html"><span class="number">4.2</span> field</a></div>
             <div class="grid-item"><a href="15.html"><span class="number">4.3</span> scatter</a></div>
             <div class="grid-item"><a href="16.html"><span class="number">4.4</span> float</a></div>
-
-            <!-- Row 5 -->
             <div class="grid-item label">5. motion</div>
             <div class="grid-item"><a href="17.html"><span class="number">5.1</span> tremor</a></div>
             <div class="grid-item"><a href="18.html"><span class="number">5.2</span> pulse</a></div>
@@ -79,5 +85,24 @@
             <div class="grid-item"><a href="20.html"><span class="number">5.4</span> flow</a></div>
         </div>
     </div>
+
+    <script>
+        function togglePopup() {
+            const popup = document.getElementById('info-popup');
+            if (popup.style.display === 'block') {
+                popup.style.display = 'none';
+            } else {
+                popup.style.display = 'block';
+            }
+        }
+
+        // Add click event listener to the popup background
+        document.getElementById('info-popup').addEventListener('click', function(e) {
+            // Close only if clicking the background (not the content)
+            if (e.target === this) {
+                this.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>

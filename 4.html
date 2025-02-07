@@ -48,12 +48,9 @@
             z-index: 1;
         }
 
-        /* Base text opacity */
         .base-text {
             opacity: 0.01;
         }
-
-        /* Real text is fully opaque */
         .real {
             position: absolute !important;
             opacity: 1 !important;
@@ -65,7 +62,6 @@
             width: 100%;
         }
 
-        /* Ghost effects */
         .line::before,
         .line::after {
             content: attr(data-text);
@@ -97,7 +93,6 @@
                 -5em -4em rgba(255, 255, 255, 0.12);
         }
 
-        /* Simple position modifiers */
         .shift-left { left: -3em; }
         .shift-right { left: 4em; }
         .shift-up { top: -1.8em; }
